@@ -1,3 +1,7 @@
+-- For nvim-tree
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
 -- Tabs
 vim.opt.tabstop = 8
 vim.opt.softtabstop = 8

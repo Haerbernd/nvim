@@ -3,7 +3,6 @@ vim.lsp.config('luals', {
         filetypes = {'lua'},
         root_markers = {'.luarc.json', '.luarc.jsonc'},
 })
-
 vim.lsp.enable('luals')
 
 vim.lsp.config('clangd', {
@@ -13,7 +12,6 @@ vim.lsp.config('clangd', {
                 fallbackFlags = {'-std=c++20'},
         },
 })
-
 vim.lsp.enable('clangd')
 
 
@@ -23,3 +21,10 @@ vim.lsp.config('marksman', { -- entirely optional the default config is fine
         root_markers = {".marksman.toml", ".git"}
 })
 vim.lsp.enable('marksman')
+
+vim.lsp.config('cmakels', {
+        cmd = {"cmake-language-server"},
+        filetypes = {"cmake", "CMakeLists.txt"},
+        root_markers = {"build/"}
+})
+vim.lsp.enable("cmakels")

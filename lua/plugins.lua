@@ -80,7 +80,7 @@ require("lazy").setup({
                     },
             },
     },
-    {
+        {
             "fiqryq/wakastat.nvim",
             event = "VeryLazy",
             cmd = { "WakastatRefresh", "WakastatStatus"},
@@ -100,4 +100,15 @@ require("lazy").setup({
                         require("autoclose").setup()
                 end,
         },
+        {
+                "nvim-tree/nvim-tree.lua",
+                version = "*",
+                lazy = false,
+                dependencies = { "nvim-tree/nvim-web-devicons" },
+                config = function()
+                        require("nvim-tree").setup({
+                                on_attach = require("plugins.nvim-tree-mappings"),
+                        })
+                end,
+        }
 })
