@@ -108,7 +108,27 @@ require("lazy").setup({
                 config = function()
                         require("nvim-tree").setup({
                                 on_attach = require("plugins.nvim-tree-mappings"),
+                                actions = {
+                                        open_file = {
+                                                quit_on_open = true,
+                                        }
+                                }
                         })
                 end,
-        }
+        },
+        {
+                "nvim-java/nvim-java",
+                config = function()
+                        require("java").setup({
+                                jdk = {
+                                        auto_install = false,
+                                        version = '21',
+                                }
+                        })
+                end,
+        },
+        {
+                "NoahTheDuke/vim-just",
+                ft = { "just" },
+        },
 })

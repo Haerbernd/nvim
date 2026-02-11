@@ -16,4 +16,5 @@ return function (bufnr)
 
         -- custom mappings
         vim.keymap.set("n",     "?",            api.tree.toggle_help,                   opts("Help"))
+        -- vim.keymap.set("n",     "<A-t>",        api.node.close.tab,                     opts("Close Tab"))
 end

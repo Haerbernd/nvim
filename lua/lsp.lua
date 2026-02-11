@@ -28,3 +28,5 @@ vim.lsp.config('cmakels', {
         root_markers = {"build/"}
 })
 vim.lsp.enable("cmakels")
+
+vim.lsp.enable("jdtls")
