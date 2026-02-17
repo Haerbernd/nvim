@@ -94,12 +94,12 @@ require("lazy").setup({
                     require("wakastat").setup(opts)
             end;
         },
-        {
+        --[[{
                 "m4xshen/autoclose.nvim",
                 config = function()
                         require("autoclose").setup()
                 end,
-        },
+        },]]
         {
                 "nvim-tree/nvim-tree.lua",
                 version = "*",
@@ -130,5 +130,22 @@ require("lazy").setup({
         {
                 "NoahTheDuke/vim-just",
                 ft = { "just" },
+        },
+        {
+                "windwp/nvim-autopairs",
+                event = "InsertEnter",
+                config = true
+        },
+        {
+                "windwp/nvim-ts-autotag",
+                config = function()
+                        require("nvim-ts-autotag").setup({
+                                opts = {
+                                        enable_close = true,
+                                        enable_rename = true,
+                                        enable_close_on_slash = false
+                                }
+                        })
+                end,
         },
 })
