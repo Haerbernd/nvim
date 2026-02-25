@@ -7,9 +7,9 @@ vim.lsp.enable('luals')
 
 vim.lsp.config('clangd', {
         cmd = { 'clangd', '--background-index', '--clang-tidy', '--log=verbose' },
-        filetypes = {"cpp", "h", "hpp"},
+        filetypes = {"cpp", "h", "hpp", "c"},
         init_options = {
-                fallbackFlags = {'-std=c++20'},
+                fallbackFlags = {'-std=c++20', '-std=c23'},
         },
 })
 vim.lsp.enable('clangd')
